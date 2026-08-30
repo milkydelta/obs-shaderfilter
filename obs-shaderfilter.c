@@ -2509,7 +2509,7 @@ static obs_properties_t *shader_filter_properties(void *data)
 	obs_properties_add_text(
 		props, "plugin_info",
 		"<a href=\"https://obsproject.com/forum/resources/obs-shaderfilter.1736/\">obs-shaderfilter</a> (" PROJECT_VERSION
-		") by <a href=\"https://www.exeldro.com\">Exeldro</a>",
+		") by <a href=\"https://www.exeldro.com\">Exeldro</a> (MD fork)",
 		OBS_TEXT_INFO);
 	return props;
 }
