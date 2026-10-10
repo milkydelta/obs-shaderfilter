@@ -2802,7 +2802,7 @@ static void shader_filter_tick(void *data, float seconds)
 	if (!target)
 		return;
 	// Determine offsets from expansion values.
-	int base_width = obs_source_idth(target);
+	int base_width = obs_source_get_base_width(target);
 	int base_height = obs_source_get_base_height(target);
 
 	filter->total_width = filter->expand_left + base_width + filter->expand_right;
@@ -3111,7 +3111,7 @@ void shader_filter_set_effect_params(struct shader_filter_data *filter)
 					gs_clear(GS_CLEAR_COLOR, &clear_color, 0.0f, 0);
 					gs_ortho(0.0f, w, 0.0f, h, -100.0f, 100.0f);
 
-					obs_source_video_render(source);
+					obs_source_(source);
 					gs_texrender_end(param->render);
 				}
 				gs_blend_state_pop();
