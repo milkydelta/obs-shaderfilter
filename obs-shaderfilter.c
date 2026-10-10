@@ -3111,7 +3111,7 @@ void shader_filter_set_effect_params(struct shader_filter_data *filter)
 					gs_clear(GS_CLEAR_COLOR, &clear_color, 0.0f, 0);
 					gs_ortho(0.0f, w, 0.0f, h, -100.0f, 100.0f);
 
-					obs_source_(source);
+					obs_source_video_render(source);
 					gs_texrender_end(param->render);
 				}
 				gs_blend_state_pop();
